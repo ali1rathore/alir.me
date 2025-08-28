@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initMorphingShapes();
     initSmoothScrolling();
+    // Removed initExperienceSection - animations disabled
 });
 
 // Hero Section Animations with Anime.js
@@ -828,3 +829,349 @@ function optimizeForMobile() {
 // Initialize mobile optimizations
 window.addEventListener('resize', optimizeForMobile);
 optimizeForMobile();
+// ============================================
+// EDUCATION SECTION ANIMATIONS
+// ============================================
+
+// Initialize education section animations
+function initEducationAnimations() {
+    // Animate education cards on scroll
+    const educationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animate card entrance
+                anime({
+                    targets: entry.target,
+                    scale: [0.9, 1],
+                    opacity: [0, 1],
+                    translateY: [30, 0],
+                    duration: 800,
+                    easing: 'easeOutExpo',
+                    delay: anime.stagger(100)
+                });
+                
+                educationObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe all education cards
+    document.querySelectorAll('.education-card, .honor-card, .org-card, .volunteer-card').forEach(card => {
+        educationObserver.observe(card);
+    });
+
+    // Add hover animations for education cards
+    document.querySelectorAll('.education-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            anime({
+                targets: this.querySelector('.card-glow'),
+                opacity: [0, 0.6],
+                scale: [0.8, 1.2],
+                duration: 600,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: this.querySelector('.institution-logo'),
+                rotate: [0, 360],
+                duration: 800,
+                easing: 'easeOutExpo'
+            });
+        });
+
+        card.addEventListener('mouseleave', function() {
+            anime({
+                targets: this.querySelector('.card-glow'),
+                opacity: [0.6, 0],
+                scale: [1.2, 0.8],
+                duration: 600,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: this.querySelector('.institution-logo'),
+                rotate: [360, 0],
+                duration: 800,
+                easing: 'easeOutExpo'
+            });
+        });
+    });
+
+    // Animate honor cards sparkle effect
+    document.querySelectorAll('.honor-card').forEach((card, index) => {
+        card.addEventListener('mouseenter', function() {
+            anime({
+                targets: this.querySelector('.honor-icon'),
+                scale: [1, 1.3, 1],
+                rotate: [0, 15, -15, 0],
+                duration: 600,
+                easing: 'easeInOutSine'
+            });
+
+            anime({
+                targets: this.querySelector('.honor-decoration'),
+                scale: [1, 1.5],
+                opacity: [0.2, 0.6],
+                duration: 800,
+                easing: 'easeOutExpo'
+            });
+        });
+
+        card.addEventListener('mouseleave', function() {
+            anime({
+                targets: this.querySelector('.honor-decoration'),
+                scale: [1.5, 1],
+                opacity: [0.6, 0.2],
+                duration: 800,
+                easing: 'easeOutExpo'
+            });
+        });
+    });
+
+    // Initialize flip card animations for organizations
+    initFlipCards();
+
+    // Animate volunteer cards
+    document.querySelectorAll('.volunteer-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            anime({
+                targets: this.querySelector('.volunteer-icon'),
+                scale: [1, 1.2, 1, 1.1, 1],
+                duration: 800,
+                easing: 'easeInOutSine',
+                loop: true
+            });
+        });
+
+        card.addEventListener('mouseleave', function() {
+            anime.remove(this.querySelector('.volunteer-icon'));
+            anime({
+                targets: this.querySelector('.volunteer-icon'),
+                scale: 1,
+                duration: 400,
+                easing: 'easeOutExpo'
+            });
+        });
+    });
+
+    // Initialize timeline animations
+    initTimelineAnimations();
+}
+
+// Initialize flip cards for organizations
+function initFlipCards() {
+    const orgCards = document.querySelectorAll('.org-card');
+    
+    orgCards.forEach(card => {
+        let isFlipped = false;
+        
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const inner = this.querySelector('.org-card-inner');
+            
+            if (!isFlipped) {
+                anime({
+                    targets: inner,
+                    rotateY: 180,
+                    duration: 600,
+                    easing: 'easeInOutSine'
+                });
+            } else {
+                anime({
+                    targets: inner,
+                    rotateY: 0,
+                    duration: 600,
+                    easing: 'easeInOutSine'
+                });
+            }
+            
+            isFlipped = !isFlipped;
+        });
+    });
+}
+
+// Initialize timeline animations
+function initTimelineAnimations() {
+    const timeline = document.querySelector('.education-timeline');
+    if (!timeline) return;
+
+    // Animate timeline line on scroll
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animate timeline line
+                anime({
+                    targets: '.timeline-line',
+                    scaleX: [0, 1],
+                    duration: 1500,
+                    easing: 'easeOutExpo'
+                });
+
+                // Animate timeline dots
+                anime({
+                    targets: '.timeline-dot',
+                    scale: [0, 1],
+                    opacity: [0, 1],
+                    duration: 800,
+                    delay: anime.stagger(200, {start: 300}),
+                    easing: 'easeOutElastic(1, .5)'
+                });
+
+                // Animate timeline content
+                anime({
+                    targets: '.timeline-content',
+                    translateY: [20, 0],
+                    opacity: [0, 0.8],
+                    duration: 1000,
+                    delay: anime.stagger(200, {start: 500}),
+                    easing: 'easeOutExpo'
+                });
+
+                timelineObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    timelineObserver.observe(timeline);
+
+    // Add hover effects to timeline items
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            anime({
+                targets: this.querySelector('.timeline-dot'),
+                scale: 1.5,
+                duration: 300,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: this.querySelector('.timeline-content'),
+                opacity: 1,
+                translateY: -10,
+                duration: 300,
+                easing: 'easeOutExpo'
+            });
+        });
+
+        item.addEventListener('mouseleave', function() {
+            anime({
+                targets: this.querySelector('.timeline-dot'),
+                scale: 1,
+                duration: 300,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: this.querySelector('.timeline-content'),
+                opacity: 0.8,
+                translateY: 0,
+                duration: 300,
+                easing: 'easeOutExpo'
+            });
+        });
+    });
+}
+
+// Animate section title icon
+function animateEducationIcon() {
+    const icon = document.querySelector('.education .title-icon');
+    if (!icon) return;
+
+    anime({
+        targets: icon,
+        translateY: [-10, 10, -10],
+        duration: 3000,
+        easing: 'easeInOutSine',
+        loop: true
+    });
+}
+
+// Initialize AOS (Animate On Scroll) library if available
+function initAOS() {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+    }
+}
+
+// Call education animations on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+    initEducationAnimations();
+    animateEducationIcon();
+    initAOS();
+});
+
+// Reinitialize animations on window resize for responsive behavior
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        // Reinitialize animations for new layout
+        if (window.innerWidth <= 768) {
+            // Mobile optimizations
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                anime.remove(item.querySelector('.timeline-dot'));
+                anime.remove(item.querySelector('.timeline-content'));
+            });
+        }
+    }, 250);
+});
+
+// Experience Section - Simplified without animations
+function initExperienceSection() {
+    // Only keep essential functionality
+    initCardExpansion();
+}
+
+// Removed animation functions - keeping page clean and fast
+
+// Card Expansion Functionality
+function initCardExpansion() {
+    const expandButtons = document.querySelectorAll('.expand-btn');
+    
+    expandButtons.forEach(button => {
+        let isExpanded = false;
+        
+        button.addEventListener('click', function() {
+            const card = this.closest('.experience-card-content');
+            const highlights = card.querySelector('.highlights-section');
+            
+            if (!highlights) return;
+            
+            isExpanded = !isExpanded;
+            
+            if (isExpanded) {
+                highlights.style.maxHeight = highlights.scrollHeight + 'px';
+                anime({
+                    targets: this.querySelector('.btn-icon'),
+                    rotate: 180,
+                    duration: 300,
+                    easing: 'easeOutQuad'
+                });
+            } else {
+                highlights.style.maxHeight = '150px';
+                anime({
+                    targets: this.querySelector('.btn-icon'),
+                    rotate: 0,
+                    duration: 300,
+                    easing: 'easeOutQuad'
+                });
+            }
+        });
+    });
+}
+
+// Simple click handlers without animations
+function initExperienceHandlers() {
+    const downloadBtn = document.querySelector('.btn-download');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Resume download triggered');
+        });
+    }
+}

@@ -1,53 +1,144 @@
-<!-- Experience Section -->
+<!-- Professional Experience Section -->
 <section id="experience" class="experience">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title">
+                <span class="title-icon">💼</span>
+                Professional Experience
+            </h2>
             <p class="section-description">
-                22+ years building and leading AI/ML solutions at scale
+                22+ years architecting AI/ML solutions from startups to Fortune 500s
             </p>
-        </div>
-        <div class="experience-timeline">
-            {{ range .Site.Data.experience }}
-            <div class="experience-item{{ if .current }} current{{ end }}">
-                <div class="experience-marker">
-                    <span class="company-logo">{{ .logo }}</span>
+            <div class="experience-stats">
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Companies Founded</span>
                 </div>
-                <div class="experience-content">
-                    <div class="experience-header">
-                        <h3 class="company-name">{{ .company }}</h3>
-                        <span class="experience-duration">{{ .duration }}</span>
-                    </div>
-                    <h4 class="experience-role">{{ .role }}</h4>
-                    <p class="experience-type">{{ .type }} · {{ .location }}</p>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">AI Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$2M+</span>
+                    <span class="stat-label">Value Generated</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="experience-timeline-container">
+            {{ range $index, $exp := .Site.Data.experience }}
+            <div class="experience-card {{ if .current }}current-role{{ end }}">
+                
+                <!-- Card Content -->
+                <div class="experience-card-wrapper">
                     
-                    {{ with .description }}
-                    <div class="experience-description">
-                        {{ . | markdownify }}
+                    <div class="experience-card-content">
+                        <div class="card-header">
+                            <div class="company-header">
+                                <div class="company-logo">{{ .logo }}</div>
+                                <div class="company-info">
+                                    <h3 class="company-name">{{ .company }}</h3>
+                                    <h4 class="role-title">{{ .role }}</h4>
+                                </div>
+                                {{ if .current }}
+                                <span class="badge-current">Current</span>
+                                {{ end }}
+                            </div>
+                            <div class="header-meta">
+                                <span class="duration">{{ .duration }}</span>
+                                <span class="separator">•</span>
+                                <span class="location">{{ .location }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            {{ with .description }}
+                            <div class="description">
+                                {{ . | markdownify }}
+                            </div>
+                            {{ end }}
+                            
+                            {{ with .highlights }}
+                            <div class="highlights-section">
+                                <h5 class="highlights-title">Key Achievements</h5>
+                                <div class="highlights-content">
+                                    {{ . | markdownify }}
+                                </div>
+                            </div>
+                            {{ end }}
+                            
+                            {{ with .skills }}
+                            <div class="skills-section">
+                                <div class="skills-container">
+                                    {{ range . }}
+                                    <span class="skill-pill">{{ . }}</span>
+                                    {{ end }}
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                        
                     </div>
-                    {{ end }}
-                    
-                    {{ with .highlights }}
-                    <div class="experience-highlights">
-                        {{ . | markdownify }}
-                    </div>
-                    {{ end }}
-                    
-                    {{ with .skills }}
-                    <div class="experience-skills">
-                        {{ range . }}
-                        <span class="skill-tag">{{ . }}</span>
-                        {{ end }}
-                    </div>
-                    {{ end }}
                 </div>
             </div>
             {{ end }}
         </div>
-        <div class="experience-footer">
-            <a href="https://www.linkedin.com/in/a8e/details/experience" target="_blank" class="btn btn-secondary">
-                View Full Experience on LinkedIn
-            </a>
+
+        <!-- Experience Summary Cards -->
+        <div class="experience-summary">
+            <div class="summary-cards">
+                <div class="summary-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="summary-icon">🏢</div>
+                    <div class="summary-content">
+                        <h5>Enterprise Leadership</h5>
+                        <p>Led engineering teams at scale, delivering mission-critical AI/ML solutions</p>
+                    </div>
+                </div>
+                <div class="summary-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="summary-icon">🚀</div>
+                    <div class="summary-content">
+                        <h5>Startup Founder</h5>
+                        <p>Founded multiple successful AI/tech companies across global markets</p>
+                    </div>
+                </div>
+                <div class="summary-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="summary-icon">🌏</div>
+                    <div class="summary-content">
+                        <h5>Global Impact</h5>
+                        <p>Delivered solutions across USA, SEA, GCC, and European markets</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Call to Action -->
+        <div class="experience-footer">
+            <div class="footer-content">
+                <p class="footer-text">Want to see the complete professional journey?</p>
+                <div class="footer-actions">
+                    <a href="https://www.linkedin.com/in/a8e/details/experience" 
+                       target="_blank" 
+                       class="btn-linkedin">
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </span>
+                        View Full Experience on LinkedIn
+                    </a>
+                    <button class="btn-download" aria-label="Download Resume">
+                        <span class="btn-icon">📄</span>
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="experience-bg-decoration">
+        <div class="decoration-grid"></div>
+        <div class="floating-particles"></div>
     </div>
 </section>

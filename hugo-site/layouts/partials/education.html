@@ -2,83 +2,153 @@
 <section id="education" class="education">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Education & Credentials</h2>
+            <h2 class="section-title">
+                <span class="title-icon">🎓</span>
+                Education & Credentials
+            </h2>
             <p class="section-description">
-                Academic foundation from UC Berkeley and recognized achievements
+                Academic excellence from UC Berkeley combined with recognized achievements and continuous learning
             </p>
         </div>
         
-        <div class="education-grid">
-            <!-- Education Column -->
-            <div class="education-column">
-                <h3 class="column-title">Education</h3>
-                <div class="education-list">
-                    {{ range .Site.Data.education.institutions }}
-                    <div class="education-item">
-                        <div class="education-logo">{{ .logo }}</div>
-                        <div class="education-content">
-                            <h4 class="institution-name">{{ .institution }}</h4>
-                            <p class="degree">{{ .degree }}</p>
-                            <p class="duration">{{ .duration }}</p>
-                            {{ with .activities }}
+        <!-- Education Cards -->
+        <div class="education-cards-container">
+            <h3 class="subsection-title">Academic Journey</h3>
+            <div class="education-cards">
+                {{ range $index, $edu := .Site.Data.education.institutions }}
+                <div class="education-card" data-aos="fade-up" data-aos-delay="{{ mul $index 100 }}">
+                    <div class="card-header">
+                        <div class="institution-logo">
+                            <span class="logo-text">{{ .logo }}</span>
+                        </div>
+                        <div class="card-badge">{{ .duration }}</div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="institution-name">{{ .institution }}</h4>
+                        <p class="degree-name">{{ .degree }}</p>
+                        {{ with .activities }}
+                        <div class="activities-section">
+                            <span class="activities-label">Activities & Honors:</span>
                             <ul class="activities-list">
                                 {{ range . }}
-                                <li>{{ . }}</li>
+                                <li class="activity-item">
+                                    <span class="activity-icon">✦</span>
+                                    {{ . }}
+                                </li>
                                 {{ end }}
                             </ul>
-                            {{ end }}
                         </div>
+                        {{ end }}
                     </div>
-                    {{ end }}
+                    <div class="card-glow"></div>
                 </div>
+                {{ end }}
             </div>
-            
-            <!-- Honors & Awards Column -->
-            <div class="honors-column">
-                <h3 class="column-title">Honors & Awards</h3>
-                <div class="honors-list">
-                    {{ range .Site.Data.education.honors }}
-                    <div class="honor-item">
+        </div>
+        
+        <!-- Honors & Awards Cards -->
+        <div class="honors-container">
+            <h3 class="subsection-title">Honors & Awards</h3>
+            <div class="honors-cards">
+                {{ range $index, $honor := .Site.Data.education.honors }}
+                <div class="honor-card" data-aos="zoom-in" data-aos-delay="{{ mul $index 150 }}">
+                    <div class="honor-icon">🏆</div>
+                    <div class="honor-content">
                         <h4 class="honor-title">{{ .title }}</h4>
                         <p class="honor-institution">{{ .institution }}</p>
                         {{ with .description }}
                         <p class="honor-description">{{ . }}</p>
                         {{ end }}
                     </div>
-                    {{ end }}
+                    <div class="honor-decoration"></div>
                 </div>
-                
-                <h3 class="column-title">Professional Organizations</h3>
-                <div class="organizations-list">
-                    {{ range .Site.Data.education.organizations }}
-                    <div class="organization-item">
-                        <h4 class="org-name">{{ .name }}</h4>
-                        {{ with .role }}
-                        <p class="org-role">{{ . }}</p>
-                        {{ end }}
-                        {{ with .description }}
-                        <p class="org-description">{{ . }}</p>
-                        {{ end }}
-                    </div>
-                    {{ end }}
-                </div>
+                {{ end }}
             </div>
         </div>
         
-        <!-- Volunteering Section -->
-        <div class="volunteering-section">
-            <h3 class="section-subtitle">Volunteer Experience</h3>
-            <div class="volunteering-grid">
-                {{ range .Site.Data.education.volunteering }}
-                <div class="volunteer-item">
-                    <h4 class="volunteer-org">{{ .organization }}</h4>
-                    <p class="volunteer-role">{{ .role }} · {{ .cause }}</p>
-                    {{ with .duration }}
-                    <p class="volunteer-duration">{{ . }}</p>
-                    {{ end }}
-                    <p class="volunteer-description">{{ .description }}</p>
+        <!-- Professional Organizations -->
+        <div class="organizations-container">
+            <h3 class="subsection-title">Professional Organizations</h3>
+            <div class="org-cards-grid">
+                {{ range $index, $org := .Site.Data.education.organizations }}
+                <div class="org-card" data-aos="flip-left" data-aos-delay="{{ mul $index 100 }}">
+                    <div class="org-card-inner">
+                        <div class="org-card-front">
+                            <div class="org-icon">🏛️</div>
+                            <h4 class="org-name">{{ .name }}</h4>
+                            {{ with .role }}
+                            <p class="org-role">{{ . }}</p>
+                            {{ end }}
+                        </div>
+                        <div class="org-card-back">
+                            {{ with .description }}
+                            <p class="org-description">{{ . }}</p>
+                            {{ end }}
+                            {{ with .duration }}
+                            <p class="org-duration">{{ . }}</p>
+                            {{ end }}
+                        </div>
+                    </div>
                 </div>
                 {{ end }}
+            </div>
+        </div>
+        
+        <!-- Volunteering Experience -->
+        <div class="volunteering-container">
+            <h3 class="subsection-title">Community Impact</h3>
+            <div class="volunteer-cards">
+                {{ range $index, $vol := .Site.Data.education.volunteering }}
+                <div class="volunteer-card" data-aos="fade-right" data-aos-delay="{{ mul $index 100 }}">
+                    <div class="volunteer-card-header">
+                        <div class="volunteer-icon-wrapper">
+                            <span class="volunteer-icon">❤️</span>
+                        </div>
+                        <div class="volunteer-meta">
+                            <h4 class="volunteer-org">{{ .organization }}</h4>
+                            <p class="volunteer-role">{{ .role }}</p>
+                        </div>
+                    </div>
+                    <div class="volunteer-card-body">
+                        <div class="volunteer-tags">
+                            <span class="volunteer-cause">{{ .cause }}</span>
+                            {{ with .duration }}
+                            <span class="volunteer-duration">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        <p class="volunteer-description">{{ .description }}</p>
+                    </div>
+                    <div class="volunteer-impact-line"></div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        
+        <!-- Interactive Timeline -->
+        <div class="education-timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-items">
+                <div class="timeline-item" data-year="2010">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h5>UC Berkeley Graduation</h5>
+                        <p>B.S. in EECS with Honors</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2008">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h5>Started at UC Berkeley</h5>
+                        <p>Transfer from DVC</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2007">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h5>Diablo Valley College</h5>
+                        <p>Computer Science Foundation</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
