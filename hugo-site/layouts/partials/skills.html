@@ -1,0 +1,44 @@
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technical Skills & Expertise</h2>
+            <p class="section-description">
+                {{ .Site.Data.skills.total_skills }}+ skills across AI, cloud, and engineering domains
+            </p>
+        </div>
+        
+        <div class="skills-grid">
+            {{ range .Site.Data.skills.categories }}
+            <div class="skill-category">
+                <h3 class="category-title">{{ .name }}</h3>
+                <div class="skill-tags">
+                    {{ range .skills }}
+                    <span class="skill-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        
+        {{ with .Site.Data.skills.endorsed_skills }}
+        <div class="endorsed-skills">
+            <h3 class="endorsed-title">Top Endorsed Skills</h3>
+            <div class="endorsed-list">
+                {{ range . }}
+                <div class="endorsed-item">
+                    <span class="skill-name">{{ .name }}</span>
+                    <span class="endorsement-count">{{ .endorsements }} endorsements</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+        
+        <div class="skills-footer">
+            <a href="https://www.linkedin.com/in/a8e/details/skills" target="_blank" class="btn btn-secondary">
+                View All Skills on LinkedIn
+            </a>
+        </div>
+    </div>
+</section>

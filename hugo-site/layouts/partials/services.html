@@ -1,0 +1,32 @@
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">AI Transformation Services</h2>
+            <p class="section-description">
+                From strategy to implementation - complete AI adoption for your organization
+            </p>
+        </div>
+        <div class="services-grid">
+            {{ range .Site.Data.services }}
+            <div class="service-card{{ if .featured }} featured{{ end }}">
+                <div class="service-header">
+                    <h3 class="service-title">{{ .title }}</h3>
+                    <div class="service-price">{{ .price }}</div>
+                </div>
+                <div class="service-description">
+                    <p>{{ .description }}</p>
+                    <ul class="service-features">
+                        {{ range .features }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="service-cta">
+                    <a href="#contact" class="btn {{ .ctaClass }}">{{ .ctaText }}</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

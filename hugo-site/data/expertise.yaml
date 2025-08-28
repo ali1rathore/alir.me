@@ -1,0 +1,35 @@
+- icon: "🤖"
+  title: "AI Agents & Multi-Agent Systems"
+  description: "Custom intelligent agents for complex business processes, multi-agent orchestration, and autonomous decision-making systems."
+  techStack:
+    - LangChain
+    - CrewAI
+    - AutoGen
+    - Semantic Kernel
+
+- icon: "⚡"
+  title: "Intelligent Automation"
+  description: "End-to-end workflow automation with AI-powered decision making, document processing, and seamless system integration."
+  techStack:
+    - Python
+    - Golang
+    - Docker
+    - Kubernetes
+
+- icon: "🧠"
+  title: "RAG & Knowledge Systems"
+  description: "Retrieval-Augmented Generation implementations, vector databases, and enterprise knowledge management systems."
+  techStack:
+    - OpenAI
+    - Pinecone
+    - Weaviate
+    - ChromaDB
+
+- icon: "☁️"
+  title: "AI-Native Cloud Solutions"
+  description: "Scalable AI infrastructure, microservices architecture, and cloud-native deployment strategies for production AI systems."
+  techStack:
+    - AWS
+    - Azure
+    - GCP
+    - Terraform

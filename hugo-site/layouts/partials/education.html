@@ -1,0 +1,85 @@
+<!-- Education & Credentials Section -->
+<section id="education" class="education">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Education & Credentials</h2>
+            <p class="section-description">
+                Academic foundation from UC Berkeley and recognized achievements
+            </p>
+        </div>
+        
+        <div class="education-grid">
+            <!-- Education Column -->
+            <div class="education-column">
+                <h3 class="column-title">Education</h3>
+                <div class="education-list">
+                    {{ range .Site.Data.education.institutions }}
+                    <div class="education-item">
+                        <div class="education-logo">{{ .logo }}</div>
+                        <div class="education-content">
+                            <h4 class="institution-name">{{ .institution }}</h4>
+                            <p class="degree">{{ .degree }}</p>
+                            <p class="duration">{{ .duration }}</p>
+                            {{ with .activities }}
+                            <ul class="activities-list">
+                                {{ range . }}
+                                <li>{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            
+            <!-- Honors & Awards Column -->
+            <div class="honors-column">
+                <h3 class="column-title">Honors & Awards</h3>
+                <div class="honors-list">
+                    {{ range .Site.Data.education.honors }}
+                    <div class="honor-item">
+                        <h4 class="honor-title">{{ .title }}</h4>
+                        <p class="honor-institution">{{ .institution }}</p>
+                        {{ with .description }}
+                        <p class="honor-description">{{ . }}</p>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+                
+                <h3 class="column-title">Professional Organizations</h3>
+                <div class="organizations-list">
+                    {{ range .Site.Data.education.organizations }}
+                    <div class="organization-item">
+                        <h4 class="org-name">{{ .name }}</h4>
+                        {{ with .role }}
+                        <p class="org-role">{{ . }}</p>
+                        {{ end }}
+                        {{ with .description }}
+                        <p class="org-description">{{ . }}</p>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Volunteering Section -->
+        <div class="volunteering-section">
+            <h3 class="section-subtitle">Volunteer Experience</h3>
+            <div class="volunteering-grid">
+                {{ range .Site.Data.education.volunteering }}
+                <div class="volunteer-item">
+                    <h4 class="volunteer-org">{{ .organization }}</h4>
+                    <p class="volunteer-role">{{ .role }} · {{ .cause }}</p>
+                    {{ with .duration }}
+                    <p class="volunteer-duration">{{ . }}</p>
+                    {{ end }}
+                    <p class="volunteer-description">{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<!-- AI Expertise Section -->
+<section id="expertise" class="expertise">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">AI Expertise & Capabilities</h2>
+            <p class="section-description">
+                Deep technical expertise across the entire AI stack, from strategy to implementation
+            </p>
+        </div>
+        <div class="expertise-grid">
+            {{ range .Site.Data.expertise }}
+            <div class="expertise-card" data-anime="card">
+                <div class="card-icon">
+                    <div>{{ .icon }}</div>
+                </div>
+                <h3 class="card-title">{{ .title }}</h3>
+                <p class="card-description">{{ .description }}</p>
+                <div class="tech-stack">
+                    {{ range .techStack }}
+                    <span class="tech-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

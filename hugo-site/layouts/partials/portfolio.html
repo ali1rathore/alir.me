@@ -1,0 +1,37 @@
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">AI Project Portfolio</h2>
+            <p class="section-description">
+                Real-world AI implementations delivering measurable business impact
+            </p>
+        </div>
+        <div class="portfolio-grid">
+            {{ range .Site.Data.portfolio }}
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-tech">{{ .category }}</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">{{ .title }}</h3>
+                    <p class="project-description">{{ .description }}</p>
+                    <div class="project-impact">
+                        {{ range .impact }}
+                        <div class="impact-metric">
+                            <span class="metric-value">{{ .metric }}</span>
+                            <span class="metric-label">{{ .label }}</span>
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="project-tech-stack">
+                        {{ range .techStack }}
+                        <span class="tech-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

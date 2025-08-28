@@ -1,0 +1,47 @@
+institutions:
+  - institution: "University of California, Berkeley"
+    degree: "B.S. Electrical Engineering and Computer Science"
+    duration: "2008 - 2010"
+    logo: "🐻"
+    activities:
+      - "Eta Kappa Nu (EECS Honors Society)"
+      - "Tau Beta Pi (Engineering Honors Society)"
+      - "Haas Research Scholar"
+
+  - institution: "Diablo Valley College"
+    degree: "Computer Science"
+    duration: "2007 - 2008"
+    logo: "🎓"
+
+honors:
+  - title: "Haas Scholar"
+    institution: "UC Berkeley"
+    description: "Prestigious undergraduate research scholarship"
+    
+  - title: "Sigma Xi Research Award"
+    institution: "Scientific Research Honor Society"
+    description: "Recognition for excellence in scientific research"
+
+organizations:
+  - name: "Engineers Without Borders"
+    role: "Project Manager"
+    duration: "Jan 2008 - Jun 2008"
+    description: "Managed team to build second-story classrooms for elementary school in remote Guatemala village"
+    
+  - name: "Eta Kappa Nu"
+    description: "Electrical Engineering Honors Society"
+    
+  - name: "Tau Beta Pi"
+    description: "Engineering Honors Society"
+
+volunteering:
+  - organization: "Engineers Without Borders USA"
+    role: "Project Manager"
+    duration: "Jan 2008 - Jun 2008"
+    cause: "Education"
+    description: "Managed a team to travel to Guatemala and build second-story classrooms for overflowing elementary school in remote village"
+    
+  - organization: "CoderSchool"
+    role: "Teacher"
+    cause: "Education"
+    description: "Teaching software development for the Blockchain"

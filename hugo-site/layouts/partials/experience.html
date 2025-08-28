@@ -1,0 +1,55 @@
+<!-- Experience Section -->
+<section id="experience" class="experience">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-description">
+                22+ years building and leading AI/ML solutions at scale
+            </p>
+        </div>
+        <div class="experience-timeline">
+            {{ range .Site.Data.experience }}
+            <div class="experience-item{{ if .current }} current{{ end }}">
+                <div class="experience-marker">
+                    <span class="company-logo">{{ .logo }}</span>
+                </div>
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <h3 class="company-name">{{ .company }}</h3>
+                        <span class="experience-duration">{{ .duration }}</span>
+                    </div>
+                    <h4 class="experience-role">{{ .role }}</h4>
+                    <p class="experience-type">{{ .type }} · {{ .location }}</p>
+                    
+                    {{ with .description }}
+                    <div class="experience-description">
+                        {{ . | markdownify }}
+                    </div>
+                    {{ end }}
+                    
+                    {{ with .achievements }}
+                    <ul class="experience-achievements">
+                        {{ range . }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                    
+                    {{ with .skills }}
+                    <div class="experience-skills">
+                        {{ range . }}
+                        <span class="skill-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <div class="experience-footer">
+            <a href="https://www.linkedin.com/in/a8e/details/experience" target="_blank" class="btn btn-secondary">
+                View Full Experience on LinkedIn
+            </a>
+        </div>
+    </div>
+</section>

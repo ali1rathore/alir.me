@@ -1,0 +1,71 @@
+{{ define "main" }}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="neural-network" id="neural-network"></div>
+            <div class="floating-shapes" id="floating-shapes"></div>
+            <div class="particle-system" id="particle-system"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-main">{{ .Site.Data.hero.title.main }}</span>
+                        <span class="title-emphasis gradient-text">{{ .Site.Data.hero.title.emphasis }}</span>
+                    </h1>
+                    {{ with .Site.Data.hero.subtitle }}
+                    <p class="hero-subtitle">{{ . }}</p>
+                    {{ end }}
+                    <p class="hero-description">{{ .Site.Data.hero.description }}</p>
+                    <div class="hero-stats">
+                        {{ range .Site.Data.hero.stats }}
+                        <div class="stat">
+                            <div class="stat-number">{{ .number }}</div>
+                            <div class="stat-label">{{ .label }}</div>
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="hero-actions">
+                        <a href="{{ .Site.Data.hero.actions.primary.link }}" class="btn btn-primary btn-large">
+                            {{ .Site.Data.hero.actions.primary.text }}
+                        </a>
+                        <a href="{{ .Site.Data.hero.actions.secondary.link }}" class="btn btn-secondary btn-large">
+                            {{ .Site.Data.hero.actions.secondary.text }}
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-container">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="terminal-title">{{ .Site.Data.hero.terminal.title }}</div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="code-line">
+                                    <span class="prompt">$</span>
+                                    <span class="typed-text" id="typed-text"></span>
+                                    <span class="cursor" id="cursor">|</span>
+                                </div>
+                                <div class="terminal-output" id="terminal-output"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "about.html" . }}
+    {{ partial "experience.html" . }}
+    {{ partial "education.html" . }}
+    {{ partial "skills.html" . }}
+    {{ partial "expertise.html" . }}
+    {{ partial "services.html" . }}
+    {{ partial "portfolio.html" . }}
+    {{ partial "contact.html" . }}
+{{ end }}

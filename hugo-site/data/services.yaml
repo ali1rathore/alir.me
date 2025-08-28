@@ -1,0 +1,51 @@
+- title: "AI Strategy & Consulting"
+  price: "Starting at $5K"
+  featured: true
+  description: "Comprehensive AI readiness assessment, strategic roadmap development, and ROI analysis for AI initiatives."
+  features:
+    - AI Opportunity Assessment
+    - Technology Stack Evaluation
+    - Implementation Roadmap
+    - ROI & Risk Analysis
+    - Team Capability Review
+  ctaText: "Get Assessment"
+  ctaClass: "btn-primary"
+
+- title: "Custom AI Agent Development"
+  price: "From $15K"
+  featured: false
+  description: "Bespoke AI agents tailored to your specific business processes and requirements, from concept to production deployment."
+  features:
+    - Requirements Analysis
+    - Agent Architecture Design
+    - Custom Implementation
+    - Integration & Testing
+    - Production Deployment
+  ctaText: "Discuss Project"
+  ctaClass: "btn-secondary"
+
+- title: "Enterprise AI Implementation"
+  price: "From $25K"
+  featured: false
+  description: "End-to-end AI solution implementation including infrastructure, security, scalability, and enterprise integration."
+  features:
+    - Infrastructure Setup
+    - Security & Compliance
+    - Scalable Architecture
+    - System Integration
+    - Performance Optimization
+  ctaText: "Start Project"
+  ctaClass: "btn-secondary"
+
+- title: "AI Training & Workshops"
+  price: "From $3K/day"
+  featured: false
+  description: "Comprehensive training programs to upskill your team in AI technologies, best practices, and hands-on implementation."
+  features:
+    - AI Fundamentals Training
+    - Hands-on Workshops
+    - Best Practices
+    - Custom Curriculum
+    - Ongoing Support
+  ctaText: "Book Training"
+  ctaClass: "btn-secondary"

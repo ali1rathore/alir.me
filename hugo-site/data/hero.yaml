@@ -1,0 +1,28 @@
+title:
+  main: "Transform Your Business with"
+  emphasis: "AI Agents & Automation"
+
+subtitle: "UC Berkeley EECS | Founder @ Lakeshore Labs"
+
+description: "Enterprise AI consultant specializing in custom agent development, intelligent automation, and AI-native solution implementation. From strategy to deployment and team training."
+
+stats:
+  - number: "22+"
+    label: "Years Experience"
+  - number: "50+"
+    label: "AI Projects"
+  - number: "700+"
+    label: "Systems Automated"
+  - number: "328+"
+    label: "LinkedIn Followers"
+
+actions:
+  primary:
+    text: "Schedule AI Strategy Call"
+    link: "#contact"
+  secondary:
+    text: "View Case Studies"
+    link: "#portfolio"
+
+terminal:
+  title: "AI Agent Development"

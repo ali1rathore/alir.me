@@ -1,0 +1,65 @@
+- company: "Lakeshore Labs"
+  logo: "🚀"
+  role: "Founder | AI Agents & Strategy"
+  type: "Full-time"
+  duration: "Nov 2024 - Present"
+  location: "San Francisco CA, Dallas TX, Vietnam, Oman · Remote"
+  current: true
+  description: |
+    We specialize in AI agents, practical automation, and custom applications that help companies across SEA and the GCC to solve real-world business problems.
+  achievements:
+    - "R&D Agent for Major F&B Group: Developed AI-powered research agent synthesizing trends from 100+ sources — reducing time-to-insight by 70%"
+    - "Social Media Agents for Cafe/Restaurant Chains: Deployed autonomous content agents — increasing engagement by 3.5× and saving 15 hrs/week"
+    - "Sales Augmentation Agent: Implemented AI sales co-pilot — driving 12% increase in order size and 15% shorter sales cycle"
+    - "AI Chat for Health Insurance: Created conversational AI assistant — achieving 90% self-service rate and cutting call-center volume by 80%"
+    - "LLM Interface for IoT Systems: Built natural-language interface to IoT networks — reducing on-site support by 75%"
+
+- company: "Magnitudeminds"
+  logo: "🧠"
+  role: "Chief Technical Advisor"
+  type: "Full-time"
+  duration: "Aug 2025 - Present"
+  location: "Ho Chi Minh City, Vietnam · Hybrid"
+  current: true
+  description: |
+    Magnitudeminds creates agentic AI solutions designed to help SMBs in Southeast Asia boost profitability by streamlining operations, automating workflows, and enabling smarter business decisions.
+  achievements:
+    - "Oversee & co-develop technical implementations and AI projects"
+    - "Mentor the technical team in AI, automation and software engineering"
+    - "Collaborate with Google Cloud, NVIDIA, Perplexity, Microsoft, and AWS startup programs"
+
+- company: "Soda Health"
+  logo: "💊"
+  role: "Senior Engineering Manager | Growth & Engagement"
+  type: "Full-time"
+  duration: "Oct 2022 - Nov 2024"
+  location: "Remote"
+  description: |
+    Oversaw the technology behind Member Experience, AndMore mobile app, web portal, engagement, e2e testing, customer segmentation, image recognition, recommendation engine, and LLM integration.
+  skills:
+    - "Data Engineering"
+    - "Orchestration"
+    - "Team Leadership"
+    - "LLM Integration"
+
+- company: "eVisit"
+  logo: "🏥"
+  role: "Engineering Manager | SaaS & Cloud"
+  type: "Full-time"
+  duration: "Sep 2021 - Aug 2022"
+  location: "Remote"
+  description: |
+    Managed the Enterprise Health Care Organizations team to deliver enterprise-ready features including SSO, Self-Service Portal, Billing, Permissions, and NLP for sentiment analysis.
+
+- company: "Metaprise Systems"
+  logo: "⚡"
+  role: "Founder | AI - Cloud - SaaS - IoT Apps"
+  type: "Full-time"
+  duration: "Jan 2019 - Sep 2021"
+  location: "USA, Netherlands, Pakistan, Vietnam · Hybrid"
+  description: |
+    Led the creation of transformative AI/ML solutions driving substantial cost savings and operational improvements.
+  achievements:
+    - "Developed fleet management system reducing fuel consumption through predictive analytics"
+    - "Created serverless computer vision app achieving 95% precision in dental color matching"
+    - "Implemented anomaly detection flagging 98% of fraudulent transactions, saving clients $500K yearly"

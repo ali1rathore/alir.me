@@ -1,0 +1,56 @@
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ .Site.Data.about.title }}</h2>
+            <p class="section-description">{{ .Site.Data.about.headline }}</p>
+        </div>
+        <div class="about-content">
+            <div class="about-bio">
+                {{ .Site.Data.about.bio | markdownify }}
+                
+                <div class="about-services">
+                    {{ range .Site.Data.about.services }}
+                    <div class="service-item">
+                        <span class="service-icon">{{ .icon }}</span>
+                        <div class="service-content">
+                            <strong>{{ .title }}:</strong> {{ .description }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                
+                <p class="about-focus">{{ .Site.Data.about.focus }}</p>
+                <p class="about-cta"><strong>{{ .Site.Data.about.cta }}</strong></p>
+            </div>
+            
+            <div class="about-sidebar">
+                <div class="credentials-card">
+                    <h3>Credentials & Achievements</h3>
+                    <ul class="credentials-list">
+                        {{ range .Site.Data.about.credentials }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+                
+                <div class="social-proof">
+                    <h3>Professional Network</h3>
+                    <div class="network-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">{{ .Site.Data.about.social.followers }}</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">{{ .Site.Data.about.social.connections }}</span>
+                            <span class="stat-label">Connections</span>
+                        </div>
+                    </div>
+                    <a href="{{ .Site.Data.about.social.linkedin }}" target="_blank" class="btn btn-secondary">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

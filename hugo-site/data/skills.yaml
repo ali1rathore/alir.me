@@ -1,0 +1,88 @@
+categories:
+  - name: "AI & Machine Learning"
+    skills:
+      - "Large Language Models (LLMs)"
+      - "AI Agents & Multi-Agent Systems"
+      - "LangChain"
+      - "CrewAI"
+      - "AutoGen"
+      - "Semantic Kernel"
+      - "RAG Systems"
+      - "Vector Databases"
+      - "Natural Language Processing"
+      - "Computer Vision"
+      - "Predictive Analytics"
+      - "Anomaly Detection"
+
+  - name: "Cloud & Infrastructure"
+    skills:
+      - "AWS"
+      - "Google Cloud Platform"
+      - "Azure"
+      - "Terraform"
+      - "Docker"
+      - "Kubernetes"
+      - "Serverless Architecture"
+      - "Microservices"
+      - "CI/CD Pipelines"
+      - "Cloud Run"
+      - "Vertex AI"
+
+  - name: "Programming & Frameworks"
+    skills:
+      - "Python"
+      - "Golang"
+      - "JavaScript/TypeScript"
+      - "C++"
+      - "Node.js"
+      - "React"
+      - "FastAPI"
+      - "Django"
+      - "GraphQL"
+      - "REST APIs"
+
+  - name: "Data & Databases"
+    skills:
+      - "PostgreSQL"
+      - "MongoDB"
+      - "Redis"
+      - "Pinecone"
+      - "Weaviate"
+      - "ChromaDB"
+      - "Data Engineering"
+      - "ETL Pipelines"
+      - "Big Data Processing"
+      - "Data Orchestration"
+
+  - name: "Leadership & Strategy"
+    skills:
+      - "Technical Architecture"
+      - "Team Leadership"
+      - "Engineering Management"
+      - "Startup Leadership"
+      - "AI Strategy"
+      - "Product Development"
+      - "Agile/Scrum"
+      - "Cross-functional Collaboration"
+      - "Mentoring"
+      - "Client Consultation"
+
+  - name: "Specialized Domains"
+    skills:
+      - "IoT Systems"
+      - "Fleet Management"
+      - "Healthcare Tech"
+      - "E-commerce"
+      - "SaaS Development"
+      - "Mobile Development"
+      - "Blockchain"
+      - "Robotics"
+      - "Manufacturing Automation"
+
+endorsed_skills:
+  - name: "Technical Architecture"
+    endorsements: 2
+  - name: "Startups"
+    endorsements: 2
+
+total_skills: 81

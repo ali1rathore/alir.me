@@ -1,0 +1,38 @@
+- title: "Intelligent Fleet Automation"
+  category: "Fleet Management AI"
+  description: "Built AI-powered fleet management system automating 700+ vehicles across Southeast Asia with real-time optimization and predictive maintenance."
+  impact:
+    - metric: "40%"
+      label: "Cost Reduction"
+    - metric: "700+"
+      label: "Vehicles Managed"
+  techStack:
+    - AI Agents
+    - Golang
+    - GPS Integration
+
+- title: "Robotic Manufacturing Intelligence"
+  category: "Manufacturing AI"
+  description: "Led software development for autonomous robotic hamburger production, coordinating sensors, motors, and control systems with AI decision-making."
+  impact:
+    - metric: "85%"
+      label: "Automation Rate"
+    - metric: "6"
+      label: "Team Members"
+  techStack:
+    - C++
+    - Python
+    - IoT Sensors
+
+- title: "Enterprise Knowledge AI"
+  category: "Enterprise RAG"
+  description: "Implemented large-scale RAG system for Fortune 500 company, enabling intelligent document processing and knowledge retrieval."
+  impact:
+    - metric: "60%"
+      label: "Query Speed"
+    - metric: "10M+"
+      label: "Documents"
+  techStack:
+    - LangChain
+    - Vector DB
+    - OpenAI
