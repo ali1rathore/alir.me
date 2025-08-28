@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Rathore - AI Consultant & Agent Builder</title>
+    <meta name="description" content="AI Consultant specializing in agents, automation, and AI-native solutions. Enterprise AI transformation, custom agent development, and team training.">
+    <meta name="keywords" content="AI consultant, AI agents, automation, machine learning, enterprise AI, AI implementation">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Ali Rathore</span>
+                <span class="logo-subtitle">AI Consultant</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-primary">Free AI Assessment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="neural-network" id="neural-network"></div>
+            <div class="floating-shapes" id="floating-shapes"></div>
+            <div class="particle-system" id="particle-system"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-main">Transform Your Business with</span>
+                        <span class="title-emphasis gradient-text">AI Agents & Automation</span>
+                    </h1>
+                    <p class="hero-description">
+                        Enterprise AI consultant specializing in custom agent development, 
+                        intelligent automation, and AI-native solution implementation. 
+                        From strategy to deployment and team training.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">AI Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">700+</div>
+                            <div class="stat-label">Systems Automated</div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary btn-large">
+                            Schedule AI Strategy Call
+                        </a>
+                        <a href="#portfolio" class="btn btn-secondary btn-large">
+                            View Case Studies
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-container">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="terminal-title">AI Agent Development</div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="code-line">
+                                    <span class="prompt">$</span>
+                                    <span class="typed-text" id="typed-text"></span>
+                                    <span class="cursor" id="cursor">|</span>
+                                </div>
+                                <div class="terminal-output" id="terminal-output"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Expertise Section -->
+    <section id="expertise" class="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Expertise & Capabilities</h2>
+                <p class="section-description">
+                    Deep technical expertise across the entire AI stack, from strategy to implementation
+                </p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card" data-anime="card">
+                    <div class="card-icon">
+                        <div class="icon-ai-agents">🤖</div>
+                    </div>
+                    <h3 class="card-title">AI Agents & Multi-Agent Systems</h3>
+                    <p class="card-description">
+                        Custom intelligent agents for complex business processes, 
+                        multi-agent orchestration, and autonomous decision-making systems.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">CrewAI</span>
+                        <span class="tech-tag">AutoGen</span>
+                        <span class="tech-tag">Semantic Kernel</span>
+                    </div>
+                </div>
+                <div class="expertise-card" data-anime="card">
+                    <div class="card-icon">
+                        <div class="icon-automation">⚡</div>
+                    </div>
+                    <h3 class="card-title">Intelligent Automation</h3>
+                    <p class="card-description">
+                        End-to-end workflow automation with AI-powered decision making, 
+                        document processing, and seamless system integration.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Golang</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="expertise-card" data-anime="card">
+                    <div class="card-icon">
+                        <div class="icon-rag">🧠</div>
+                    </div>
+                    <h3 class="card-title">RAG & Knowledge Systems</h3>
+                    <p class="card-description">
+                        Retrieval-Augmented Generation implementations, vector databases, 
+                        and enterprise knowledge management systems.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">Pinecone</span>
+                        <span class="tech-tag">Weaviate</span>
+                        <span class="tech-tag">ChromaDB</span>
+                    </div>
+                </div>
+                <div class="expertise-card" data-anime="card">
+                    <div class="card-icon">
+                        <div class="icon-cloud">☁️</div>
+                    </div>
+                    <h3 class="card-title">AI-Native Cloud Solutions</h3>
+                    <p class="card-description">
+                        Scalable AI infrastructure, microservices architecture, 
+                        and cloud-native deployment strategies for production AI systems.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Transformation Services</h2>
+                <p class="section-description">
+                    From strategy to implementation - complete AI adoption for your organization
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <h3 class="service-title">AI Strategy & Consulting</h3>
+                        <div class="service-price">Starting at $5K</div>
+                    </div>
+                    <div class="service-description">
+                        <p>Comprehensive AI readiness assessment, strategic roadmap development, 
+                        and ROI analysis for AI initiatives.</p>
+                        <ul class="service-features">
+                            <li>AI Opportunity Assessment</li>
+                            <li>Technology Stack Evaluation</li>
+                            <li>Implementation Roadmap</li>
+                            <li>ROI & Risk Analysis</li>
+                            <li>Team Capability Review</li>
+                        </ul>
+                    </div>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-primary">Get Assessment</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-title">Custom AI Agent Development</h3>
+                        <div class="service-price">From $15K</div>
+                    </div>
+                    <div class="service-description">
+                        <p>Bespoke AI agents tailored to your specific business processes 
+                        and requirements, from concept to production deployment.</p>
+                        <ul class="service-features">
+                            <li>Requirements Analysis</li>
+                            <li>Agent Architecture Design</li>
+                            <li>Custom Implementation</li>
+                            <li>Integration & Testing</li>
+                            <li>Production Deployment</li>
+                        </ul>
+                    </div>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-secondary">Discuss Project</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-title">Enterprise AI Implementation</h3>
+                        <div class="service-price">From $25K</div>
+                    </div>
+                    <div class="service-description">
+                        <p>End-to-end AI solution implementation including infrastructure, 
+                        security, scalability, and enterprise integration.</p>
+                        <ul class="service-features">
+                            <li>Infrastructure Setup</li>
+                            <li>Security & Compliance</li>
+                            <li>Scalable Architecture</li>
+                            <li>System Integration</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-secondary">Start Project</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-title">AI Training & Workshops</h3>
+                        <div class="service-price">From $3K/day</div>
+                    </div>
+                    <div class="service-description">
+                        <p>Comprehensive training programs to upskill your team in AI technologies, 
+                        best practices, and hands-on implementation.</p>
+                        <ul class="service-features">
+                            <li>AI Fundamentals Training</li>
+                            <li>Hands-on Workshops</li>
+                            <li>Best Practices</li>
+                            <li>Custom Curriculum</li>
+                            <li>Ongoing Support</li>
+                        </ul>
+                    </div>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-secondary">Book Training</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Project Portfolio</h2>
+                <p class="section-description">
+                    Real-world AI implementations delivering measurable business impact
+                </p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tech">Fleet Management AI</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Intelligent Fleet Automation</h3>
+                        <p class="project-description">
+                            Built AI-powered fleet management system automating 700+ vehicles 
+                            across Southeast Asia with real-time optimization and predictive maintenance.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-metric">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">Cost Reduction</span>
+                            </div>
+                            <div class="impact-metric">
+                                <span class="metric-value">700+</span>
+                                <span class="metric-label">Vehicles Managed</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">AI Agents</span>
+                            <span class="tech-tag">Golang</span>
+                            <span class="tech-tag">GPS Integration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tech">Manufacturing AI</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Robotic Manufacturing Intelligence</h3>
+                        <p class="project-description">
+                            Led software development for autonomous robotic hamburger production, 
+                            coordinating sensors, motors, and control systems with AI decision-making.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-metric">
+                                <span class="metric-value">85%</span>
+                                <span class="metric-label">Automation Rate</span>
+                            </div>
+                            <div class="impact-metric">
+                                <span class="metric-value">6</span>
+                                <span class="metric-label">Team Members</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">IoT Sensors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tech">Enterprise RAG</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Enterprise Knowledge AI</h3>
+                        <p class="project-description">
+                            Implemented large-scale RAG system for Fortune 500 company, 
+                            enabling intelligent document processing and knowledge retrieval.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-metric">
+                                <span class="metric-value">60%</span>
+                                <span class="metric-label">Query Speed</span>
+                            </div>
+                            <div class="impact-metric">
+                                <span class="metric-value">10M+</span>
+                                <span class="metric-label">Documents</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Vector DB</span>
+                            <span class="tech-tag">OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Ready to Transform Your Business with AI?</h2>
+                    <p class="contact-description">
+                        Get a free AI readiness assessment and strategic consultation. 
+                        Let's discuss how AI agents and automation can drive your business forward.
+                    </p>
+                    <div class="contact-benefits">
+                        <div class="benefit">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">Free 30-minute AI strategy call</div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">Custom AI opportunity assessment</div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">Technology recommendations</div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">Implementation roadmap outline</div>
+                        </div>
+                    </div>
+                    <div class="contact-direct">
+                        <p class="direct-label">Prefer direct contact?</p>
+                        <a href="mailto:ali@alir.me" class="email-link">ali@alir.me</a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type">Project Interest</label>
+                            <select id="project-type" name="project-type">
+                                <option value="">Select an option</option>
+                                <option value="strategy">AI Strategy & Consulting</option>
+                                <option value="agents">Custom AI Agents</option>
+                                <option value="automation">Process Automation</option>
+                                <option value="implementation">Enterprise Implementation</option>
+                                <option value="training">Training & Workshops</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your AI goals and current challenges..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Schedule Free AI Assessment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">Ali Rathore</span>
+                        <span class="logo-subtitle">AI Consultant & Agent Builder</span>
+                    </div>
+                    <p class="footer-description">
+                        Transforming businesses through intelligent automation and AI-native solutions.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="#expertise">Expertise</a>
+                        <a href="#services">Services</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ali Rathore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
