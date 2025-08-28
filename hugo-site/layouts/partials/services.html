@@ -16,11 +16,13 @@
                 </div>
                 <div class="service-description">
                     <p>{{ .description }}</p>
+                    {{ if .features }}
                     <ul class="service-features">
                         {{ range .features }}
                         <li>{{ . }}</li>
                         {{ end }}
                     </ul>
+                    {{ end }}
                 </div>
                 <div class="service-cta">
                     <a href="#contact" class="btn {{ .ctaClass }}">{{ .ctaText }}</a>

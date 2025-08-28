@@ -1,4 +1,4 @@
-- icon: "🤖"
+- icon: "AI"
   title: "AI Agents & Multi-Agent Systems"
   description: "Custom intelligent agents for complex business processes, multi-agent orchestration, and autonomous decision-making systems."
   techStack:
@@ -7,7 +7,7 @@
     - AutoGen
     - Semantic Kernel
 
-- icon: "⚡"
+- icon: "AUTO"
   title: "Intelligent Automation"
   description: "End-to-end workflow automation with AI-powered decision making, document processing, and seamless system integration."
   techStack:
@@ -16,7 +16,7 @@
     - Docker
     - Kubernetes
 
-- icon: "🧠"
+- icon: "RAG"
   title: "RAG & Knowledge Systems"
   description: "Retrieval-Augmented Generation implementations, vector databases, and enterprise knowledge management systems."
   techStack:
@@ -25,7 +25,7 @@
     - Weaviate
     - ChromaDB
 
-- icon: "☁️"
+- icon: "CLOUD"
   title: "AI-Native Cloud Solutions"
   description: "Scalable AI infrastructure, microservices architecture, and cloud-native deployment strategies for production AI systems."
   techStack:

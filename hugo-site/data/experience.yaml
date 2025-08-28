@@ -1,5 +1,5 @@
 - company: "Lakeshore Labs"
-  logo: "🚀"
+  logo: "LL"
   role: "Founder | AI Agents & Strategy"
   type: "Full-time"
   duration: "Nov 2024 - Present"
@@ -7,15 +7,13 @@
   current: true
   description: |
     We specialize in AI agents, practical automation, and custom applications that help companies across SEA and the GCC to solve real-world business problems.
-  achievements:
-    - "R&D Agent for Major F&B Group: Developed AI-powered research agent synthesizing trends from 100+ sources — reducing time-to-insight by 70%"
-    - "Social Media Agents for Cafe/Restaurant Chains: Deployed autonomous content agents — increasing engagement by 3.5× and saving 15 hrs/week"
-    - "Sales Augmentation Agent: Implemented AI sales co-pilot — driving 12% increase in order size and 15% shorter sales cycle"
-    - "AI Chat for Health Insurance: Created conversational AI assistant — achieving 90% self-service rate and cutting call-center volume by 80%"
-    - "LLM Interface for IoT Systems: Built natural-language interface to IoT networks — reducing on-site support by 75%"
+  highlights: |
+    Built an AI research agent for a major F&B group that synthesizes trends from 100+ data sources, cutting their time-to-insight by 70%. Deployed autonomous content agents for restaurant chains across multiple regions, increasing engagement 3.5× while saving 15 hours of manual work weekly. 
+    
+    Implemented an AI sales co-pilot for a distributor that surfaces opportunities directly in CRM, driving 12% larger orders and 15% faster sales cycles. Created conversational AI for health insurance providers achieving 90% self-service rates and slashing call center volume by 80%. Developed natural language interfaces for distributed IoT systems that reduced on-site support needs by 75%.
 
 - company: "Magnitudeminds"
-  logo: "🧠"
+  logo: "MM"
   role: "Chief Technical Advisor"
   type: "Full-time"
   duration: "Aug 2025 - Present"
@@ -23,13 +21,11 @@
   current: true
   description: |
     Magnitudeminds creates agentic AI solutions designed to help SMBs in Southeast Asia boost profitability by streamlining operations, automating workflows, and enabling smarter business decisions.
-  achievements:
-    - "Oversee & co-develop technical implementations and AI projects"
-    - "Mentor the technical team in AI, automation and software engineering"
-    - "Collaborate with Google Cloud, NVIDIA, Perplexity, Microsoft, and AWS startup programs"
+  highlights: |
+    Leading technical strategy for agentic AI solutions targeting Southeast Asia's SMB market. Partnering with Google Cloud for Startups, NVIDIA Inception, and Microsoft for Startups to build scalable AI products that transform how small businesses operate. Currently mentoring a team of engineers while co-developing core AI implementations that power our platform.
 
 - company: "Soda Health"
-  logo: "💊"
+  logo: "SH"
   role: "Senior Engineering Manager | Growth & Engagement"
   type: "Full-time"
   duration: "Oct 2022 - Nov 2024"
@@ -43,7 +39,7 @@
     - "LLM Integration"
 
 - company: "eVisit"
-  logo: "🏥"
+  logo: "EV"
   role: "Engineering Manager | SaaS & Cloud"
   type: "Full-time"
   duration: "Sep 2021 - Aug 2022"
@@ -52,14 +48,12 @@
     Managed the Enterprise Health Care Organizations team to deliver enterprise-ready features including SSO, Self-Service Portal, Billing, Permissions, and NLP for sentiment analysis.
 
 - company: "Metaprise Systems"
-  logo: "⚡"
+  logo: "MS"
   role: "Founder | AI - Cloud - SaaS - IoT Apps"
   type: "Full-time"
   duration: "Jan 2019 - Sep 2021"
   location: "USA, Netherlands, Pakistan, Vietnam · Hybrid"
   description: |
     Led the creation of transformative AI/ML solutions driving substantial cost savings and operational improvements.
-  achievements:
-    - "Developed fleet management system reducing fuel consumption through predictive analytics"
-    - "Created serverless computer vision app achieving 95% precision in dental color matching"
-    - "Implemented anomaly detection flagging 98% of fraudulent transactions, saving clients $500K yearly"
+  highlights: |
+    Developed predictive analytics for fleet management that dramatically reduced fuel consumption and theft. Created a serverless computer vision application achieving 95% precision in dental color matching while cutting operational costs. Implemented anomaly detection systems that flagged 98% of fraudulent transactions, saving clients over $500K annually.

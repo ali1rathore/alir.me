@@ -1,6 +1,6 @@
 - title: "Intelligent Fleet Automation"
   category: "Fleet Management AI"
-  description: "Built AI-powered fleet management system automating 700+ vehicles across Southeast Asia with real-time optimization and predictive maintenance."
+  description: "When a logistics company across Southeast Asia needed to manage 700+ vehicles in real-time, we didn't just track GPS dots. We built predictive AI that anticipates maintenance needs, optimizes routes based on traffic patterns, and detects fuel theft before it impacts the bottom line. Result: 40% cost reduction in the first year."
   impact:
     - metric: "40%"
       label: "Cost Reduction"
@@ -13,7 +13,7 @@
 
 - title: "Robotic Manufacturing Intelligence"
   category: "Manufacturing AI"
-  description: "Led software development for autonomous robotic hamburger production, coordinating sensors, motors, and control systems with AI decision-making."
+  description: "Leading a team of six engineers, I architected the brain of an autonomous hamburger-making robot. This wasn't just automation—it was coordinating dozens of sensors, motors, and control systems to maintain food safety standards while matching human speed. The system now runs at 85% automation with AI handling quality control in real-time."
   impact:
     - metric: "85%"
       label: "Automation Rate"
@@ -26,7 +26,7 @@
 
 - title: "Enterprise Knowledge AI"
   category: "Enterprise RAG"
-  description: "Implemented large-scale RAG system for Fortune 500 company, enabling intelligent document processing and knowledge retrieval."
+  description: "A Fortune 500 company was drowning in 10 million documents across legacy systems. We built a RAG system that doesn't just search—it understands context, surfaces insights, and learns from user interactions. Query response times dropped 60% while accuracy improved dramatically. Their knowledge workers now spend time analyzing, not searching."
   impact:
     - metric: "60%"
       label: "Query Speed"

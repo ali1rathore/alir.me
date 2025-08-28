@@ -2,7 +2,7 @@ institutions:
   - institution: "University of California, Berkeley"
     degree: "B.S. Electrical Engineering and Computer Science"
     duration: "2008 - 2010"
-    logo: "🐻"
+    logo: "UCB"
     activities:
       - "Eta Kappa Nu (EECS Honors Society)"
       - "Tau Beta Pi (Engineering Honors Society)"
@@ -11,7 +11,7 @@ institutions:
   - institution: "Diablo Valley College"
     degree: "Computer Science"
     duration: "2007 - 2008"
-    logo: "🎓"
+    logo: "DVC"
 
 honors:
   - title: "Haas Scholar"

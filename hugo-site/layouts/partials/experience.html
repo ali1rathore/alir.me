@@ -27,12 +27,10 @@
                     </div>
                     {{ end }}
                     
-                    {{ with .achievements }}
-                    <ul class="experience-achievements">
-                        {{ range . }}
-                        <li>{{ . }}</li>
-                        {{ end }}
-                    </ul>
+                    {{ with .highlights }}
+                    <div class="experience-highlights">
+                        {{ . | markdownify }}
+                    </div>
                     {{ end }}
                     
                     {{ with .skills }}

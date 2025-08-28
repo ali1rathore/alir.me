@@ -2,18 +2,20 @@ title: "About Ali Rathore"
 headline: "Founder & CTO Building AI-Native Solutions"
 
 bio: |
-  I'm the Founder and CTO of Lakeshore Labs, an AI-native consulting, training, and implementation company. We help businesses design, build, and adopt intelligent automation, AI agents, and custom applications that streamline their operations, reduce costs, and unlock new opportunities for growth.
-
-  With 22+ years of engineering and AI consulting experience, I work closely with leadership teams to translate AI potential into measurable, strategic outcomes.
+  After two decades architecting systems that scale from startups to Fortune 500s, I founded Lakeshore Labs to solve a critical gap: most companies know AI will transform their industry, but they don't know where to start or how to execute.
+  
+  We're not another consultancy selling PowerPoints. We build production AI systems that actually ship. From autonomous agents managing 700+ vehicle fleets across Southeast Asia to RAG systems processing millions of enterprise documents, our implementations drive real revenue and cut real costs.
+  
+  My journey from UC Berkeley EECS through Silicon Valley engineering leadership taught me that the best technology means nothing if it doesn't solve business problems. That's why we focus on pragmatic AI—systems that work today, scale tomorrow, and deliver ROI from day one.
 
 services:
-  - icon: "✅"
+  - icon: "Strategy"
     title: "Consulting"
     description: "Creating actionable AI and automation strategies tailored to your business"
-  - icon: "✅"
+  - icon: "Build"
     title: "Implementation"
     description: "Building and deploying AI agents, workflow automations, and bespoke apps"
-  - icon: "✅"
+  - icon: "Learn"
     title: "Training"
     description: "Helping teams build the skills and mindset required to adopt AI effectively"
 
@@ -22,10 +24,10 @@ focus: "With a deep focus on making AI practical, approachable, and valuable, we
 cta: "If you're exploring how AI can transform your business, I'm happy to connect and discuss!"
 
 credentials:
-  - "🎓 UC Berkeley - B.S. Electrical Engineering & Computer Science"
-  - "🏆 Haas Scholar | Sigma Xi Research Award"
-  - "⚡ Eta Kappa Nu (EECS Honors Society)"
-  - "🔧 Tau Beta Pi (Engineering Honors Society)"
+  - "UC Berkeley - B.S. Electrical Engineering & Computer Science"
+  - "Haas Scholar | Sigma Xi Research Award"
+  - "Eta Kappa Nu (EECS Honors Society)"
+  - "Tau Beta Pi (Engineering Honors Society)"
 
 social:
   linkedin: "https://www.linkedin.com/in/a8e"
