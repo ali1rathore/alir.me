@@ -306,14 +306,14 @@
     line-height: 1.5;
 }
 
-/* Footer Section - Mobile First */
+/* Experience Footer Section - Mobile First */
 .experience-footer {
     margin-top: 50px;
     text-align: center;
     padding: 0 15px;
 }
 
-.footer-content {
+.experience-footer .footer-content {
     background: var(--glass-bg);
     backdrop-filter: var(--blur-sm);
     border: 1px solid var(--glass-border);
@@ -321,13 +321,13 @@
     padding: 30px 20px;
 }
 
-.footer-text {
+.experience-footer .footer-text {
     font-size: 16px;
     color: var(--text-secondary);
     margin-bottom: 20px;
 }
 
-.footer-actions {
+.experience-footer .footer-actions {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -433,7 +433,7 @@
         font-size: 14px;
     }
 
-    .footer-actions {
+    .experience-footer .footer-actions {
         flex-direction: row;
         justify-content: center;
         gap: 15px;
@@ -513,7 +513,7 @@
         font-size: 48px;
     }
 
-    .footer-content {
+    .experience-footer .footer-content {
         padding: 40px;
     }
 

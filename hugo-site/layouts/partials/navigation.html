@@ -4,6 +4,14 @@
             <span class="logo-text">Ali Rathore</span>
             <span class="logo-subtitle">AI Consultant</span>
         </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
         <div class="nav-menu">
             {{ range .Site.Menus.main }}
             <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
@@ -13,4 +21,18 @@
             <a href="#contact" class="btn btn-primary">Free AI Assessment</a>
         </div>
     </div>
+    
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-dropdown">
+        <div class="mobile-dropdown-content">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" class="mobile-nav-link">{{ .Name }}</a>
+            {{ end }}
+            <div class="mobile-dropdown-divider"></div>
+            <a href="#contact" class="mobile-nav-link mobile-cta-link">Free AI Assessment</a>
+        </div>
+    </div>
+    
+    <!-- Backdrop for closing dropdown when clicking outside -->
+    <div class="mobile-dropdown-backdrop"></div>
 </nav>

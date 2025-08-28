@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initGlassmorphicCards();
     initTerminalAnimation();
     initNavigationEffects();
+    initMobileMenu();
     initContactForm();
     initMorphingShapes();
     initSmoothScrolling();
+    initTouchOptimizations();
     // Removed initExperienceSection - animations disabled
 });
 
@@ -80,10 +82,13 @@ function initHeroAnimations() {
     });
 }
 
-// Floating Shapes Animation
+// Floating Shapes Animation with Mobile Optimization
 function initFloatingShapes() {
     const shapesContainer = document.getElementById('floating-shapes');
     if (!shapesContainer) return;
+    
+    // Skip on mobile for performance
+    if (window.innerWidth <= 768) return;
 
     // Create floating geometric shapes
     const shapes = [
@@ -145,12 +150,14 @@ function initFloatingShapes() {
     });
 }
 
-// Particle System
+// Particle System with Mobile Optimization
 function initParticleSystem() {
     const particleContainer = document.getElementById('particle-system');
     if (!particleContainer) return;
-
-    const particleCount = 50;
+    
+    // Reduce particles on mobile
+    const isMobile = window.innerWidth <= 768;
+    const particleCount = isMobile ? 15 : 50;
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
@@ -404,7 +411,7 @@ function animateStatsCounter() {
     });
 }
 
-// Enhanced Terminal Animation
+// Enhanced Terminal Animation with Mobile Optimization
 function initTerminalAnimation() {
     const typedText = document.getElementById('typed-text');
     const cursor = document.getElementById('cursor');
@@ -412,35 +419,49 @@ function initTerminalAnimation() {
     
     if (!typedText || !cursor || !terminalOutput) return;
     
-    const commands = [
+    // Reduce animation complexity on mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    const commands = isMobile ? [
+        { 
+            command: 'ai-consultant --analyze',
+            delay: 40,
+            output: [
+                { text: 'Initializing AI agent framework...', type: 'info', delay: 800 },
+                { text: 'Multi-agent orchestration loaded', type: 'success', delay: 600 },
+                { text: 'Processing 700+ vehicle data points...', type: 'info', delay: 700 },
+                { text: 'Fleet optimization complete - 40% cost reduction', type: 'success', delay: 900 }
+            ]
+        }
+    ] : [
         { 
             command: 'python ai_agent_builder.py --create-fleet-manager',
             delay: 50,
             output: [
-                { text: '🤖 Initializing AI agent framework...', type: 'info', delay: 800 },
-                { text: '✅ Multi-agent orchestration loaded', type: 'success', delay: 600 },
-                { text: '📊 Processing 700+ vehicle data points...', type: 'info', delay: 700 },
-                { text: '🚗 Fleet optimization complete - 40% cost reduction', type: 'success', delay: 900 }
+                { text: 'Initializing AI agent framework...', type: 'info', delay: 800 },
+                { text: 'Multi-agent orchestration loaded', type: 'success', delay: 600 },
+                { text: 'Processing 700+ vehicle data points...', type: 'info', delay: 700 },
+                { text: 'Fleet optimization complete - 40% cost reduction', type: 'success', delay: 900 }
             ]
         },
         { 
             command: 'go run distributed_system.go --scale-production',
             delay: 40,
             output: [
-                { text: '🏗️  Building cloud-native infrastructure...', type: 'info', delay: 700 },
-                { text: '🔄 Orchestrating microservices...', type: 'info', delay: 600 },
-                { text: '📈 System scaled to handle 10M+ requests/day', type: 'success', delay: 800 },
-                { text: '⚡ Performance optimized - 85% faster response', type: 'success', delay: 700 }
+                { text: 'Building cloud-native infrastructure...', type: 'info', delay: 700 },
+                { text: 'Orchestrating microservices...', type: 'info', delay: 600 },
+                { text: 'System scaled to handle 10M+ requests/day', type: 'success', delay: 800 },
+                { text: 'Performance optimized - 85% faster response', type: 'success', delay: 700 }
             ]
         },
         { 
             command: 'ai-consultant --analyze-business-process',
             delay: 45,
             output: [
-                { text: '🔍 Analyzing workflow inefficiencies...', type: 'info', delay: 600 },
-                { text: '🧠 AI recommendations generated', type: 'success', delay: 700 },
-                { text: '🎯 Automation opportunities identified', type: 'info', delay: 650 },
-                { text: '💡 ROI projection: 300% within 12 months', type: 'success', delay: 800 }
+                { text: 'Analyzing workflow inefficiencies...', type: 'info', delay: 600 },
+                { text: 'AI recommendations generated', type: 'success', delay: 700 },
+                { text: 'Automation opportunities identified', type: 'info', delay: 650 },
+                { text: 'ROI projection: 300% within 12 months', type: 'success', delay: 800 }
             ]
         }
     ];
@@ -782,7 +803,7 @@ function showFormMessage(message, type) {
     }, 5000);
 }
 
-// Smooth Scrolling
+// Smooth Scrolling with Mobile Support
 function initSmoothScrolling() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -794,17 +815,178 @@ function initSmoothScrolling() {
             
             if (targetElement) {
                 const navHeight = document.querySelector('.nav').offsetHeight;
-                const targetPosition = targetElement.offsetTop - navHeight;
+                const targetPosition = targetElement.offsetTop - navHeight - 10; // Extra padding
                 
-                anime({
-                    targets: document.documentElement,
-                    scrollTop: targetPosition,
-                    duration: 1000,
-                    easing: 'easeInOutExpo'
-                });
+                // Use native smooth scroll on mobile for better performance
+                if (window.innerWidth <= 768) {
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    anime({
+                        targets: document.documentElement,
+                        scrollTop: targetPosition,
+                        duration: 1000,
+                        easing: 'easeInOutExpo'
+                    });
+                }
             }
         });
     });
+}
+
+// Mobile Dropdown Menu Functionality
+function initMobileMenu() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileDropdown = document.querySelector('.mobile-dropdown');
+    const mobileBackdrop = document.querySelector('.mobile-dropdown-backdrop');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    if (!mobileToggle || !mobileDropdown) {
+        return;
+    }
+    
+    let isOpen = false;
+    
+    function openDropdown() {
+        isOpen = true;
+        mobileDropdown.classList.add('active');
+        mobileToggle.classList.add('active');
+        if (mobileBackdrop) {
+            mobileBackdrop.classList.add('active');
+        }
+        
+        // Animate menu items
+        anime({
+            targets: '.mobile-nav-link',
+            translateY: [-20, 0],
+            opacity: [0, 1],
+            duration: 300,
+            delay: anime.stagger(50, {start: 50}),
+            easing: 'easeOutExpo'
+        });
+    }
+    
+    function closeDropdown() {
+        isOpen = false;
+        mobileDropdown.classList.remove('active');
+        mobileToggle.classList.remove('active');
+        if (mobileBackdrop) {
+            mobileBackdrop.classList.remove('active');
+        }
+    }
+    
+    function toggleDropdown() {
+        if (isOpen) {
+            closeDropdown();
+        } else {
+            openDropdown();
+        }
+    }
+    
+    // Toggle dropdown on hamburger click
+    mobileToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleDropdown();
+    });
+    
+    // Close dropdown when clicking backdrop
+    if (mobileBackdrop) {
+        mobileBackdrop.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeDropdown();
+        });
+    }
+    
+    // Close dropdown when clicking on links
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            
+            // Close dropdown
+            closeDropdown();
+            
+            // Handle smooth scrolling for anchor links
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    setTimeout(() => {
+                        const navHeight = document.querySelector('.nav').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - navHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }, 300);
+                }
+            }
+        });
+    });
+    
+    // Close dropdown on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen) {
+            closeDropdown();
+        }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (isOpen && !mobileToggle.contains(e.target) && !mobileDropdown.contains(e.target)) {
+            closeDropdown();
+        }
+    });
+    
+    // Close dropdown on scroll
+    let scrollTimer;
+    window.addEventListener('scroll', function() {
+        if (isOpen) {
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(() => {
+                closeDropdown();
+            }, 100);
+        }
+    }, { passive: true });
+}
+
+// Touch Optimizations
+function initTouchOptimizations() {
+    // Add touch feedback to buttons
+    const buttons = document.querySelectorAll('.btn, .nav-link, .mobile-nav-link');
+    
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        button.addEventListener('touchend', function() {
+            this.style.transform = '';
+        });
+    });
+    
+    // Improve scroll performance
+    let ticking = false;
+    function updateScrollPosition() {
+        ticking = false;
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollPosition);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
+    
+    // Disable hover effects on touch devices
+    if ('ontouchstart' in window) {
+        document.documentElement.classList.add('touch-device');
+    }
 }
 
 // Performance optimization for mobile
@@ -815,19 +997,44 @@ function optimizeForMobile() {
         // Reduce particle count for mobile
         const particles = document.querySelectorAll('.particle');
         particles.forEach((particle, index) => {
-            if (index > 25) particle.remove();
+            if (index > 20) particle.remove();
         });
         
-        // Simplify animations for mobile
+        // Reduce floating shapes for mobile
         const floatingShapes = document.querySelectorAll('.floating-shape');
-        floatingShapes.forEach(shape => {
-            shape.style.opacity = '0.05';
+        floatingShapes.forEach((shape, index) => {
+            if (index > 2) {
+                shape.remove();
+            } else {
+                shape.style.opacity = '0.03';
+            }
         });
+        
+        // Simplify animations
+        anime.speed = 0.5; // Reduce animation speed globally
     }
 }
 
+// Debounce resize events
+let resizeTimer;
+function handleResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        optimizeForMobile();
+        
+        // Close mobile dropdown on resize
+        const mobileDropdown = document.querySelector('.mobile-dropdown');
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        if (mobileDropdown && window.innerWidth > 1024) {
+            mobileDropdown.classList.remove('active');
+            mobileToggle?.classList.remove('active');
+            document.querySelector('.mobile-dropdown-backdrop')?.classList.remove('active');
+        }
+    }, 250);
+}
+
 // Initialize mobile optimizations
-window.addEventListener('resize', optimizeForMobile);
+window.addEventListener('resize', handleResize);
 optimizeForMobile();
 // ============================================
 // EDUCATION SECTION ANIMATIONS
@@ -1086,30 +1293,23 @@ function animateEducationIcon() {
     });
 }
 
-// Initialize AOS (Animate On Scroll) library if available
+// AOS animations disabled
 function initAOS() {
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            offset: 100,
-            once: true,
-            easing: 'ease-out-cubic'
-        });
-    }
+    // Disabled - no animations
 }
 
 // Call education animations on DOM load
 document.addEventListener('DOMContentLoaded', function() {
-    initEducationAnimations();
-    animateEducationIcon();
-    initAOS();
+    // initEducationAnimations(); // Disabled
+    // animateEducationIcon(); // Disabled
+    // initAOS(); // Disabled
 });
 
 // Reinitialize animations on window resize for responsive behavior
-let resizeTimer;
+let educationResizeTimer;
 window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
+    clearTimeout(educationResizeTimer);
+    educationResizeTimer = setTimeout(function() {
         // Reinitialize animations for new layout
         if (window.innerWidth <= 768) {
             // Mobile optimizations

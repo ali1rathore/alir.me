@@ -3,7 +3,6 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">
-                <span class="title-icon">🎓</span>
                 Education & Credentials
             </h2>
             <p class="section-description">
@@ -16,7 +15,7 @@
             <h3 class="subsection-title">Academic Journey</h3>
             <div class="education-cards">
                 {{ range $index, $edu := .Site.Data.education.institutions }}
-                <div class="education-card" data-aos="fade-up" data-aos-delay="{{ mul $index 100 }}">
+                <div class="education-card">
                     <div class="card-header">
                         <div class="institution-logo">
                             <span class="logo-text">{{ .logo }}</span>
@@ -32,7 +31,6 @@
                             <ul class="activities-list">
                                 {{ range . }}
                                 <li class="activity-item">
-                                    <span class="activity-icon">✦</span>
                                     {{ . }}
                                 </li>
                                 {{ end }}
@@ -51,8 +49,8 @@
             <h3 class="subsection-title">Honors & Awards</h3>
             <div class="honors-cards">
                 {{ range $index, $honor := .Site.Data.education.honors }}
-                <div class="honor-card" data-aos="zoom-in" data-aos-delay="{{ mul $index 150 }}">
-                    <div class="honor-icon">🏆</div>
+                <div class="honor-card">
+                    <div class="honor-icon"></div>
                     <div class="honor-content">
                         <h4 class="honor-title">{{ .title }}</h4>
                         <p class="honor-institution">{{ .institution }}</p>
@@ -71,10 +69,10 @@
             <h3 class="subsection-title">Professional Organizations</h3>
             <div class="org-cards-grid">
                 {{ range $index, $org := .Site.Data.education.organizations }}
-                <div class="org-card" data-aos="flip-left" data-aos-delay="{{ mul $index 100 }}">
+                <div class="org-card">
                     <div class="org-card-inner">
                         <div class="org-card-front">
-                            <div class="org-icon">🏛️</div>
+                            <div class="org-icon"></div>
                             <h4 class="org-name">{{ .name }}</h4>
                             {{ with .role }}
                             <p class="org-role">{{ . }}</p>
@@ -99,10 +97,10 @@
             <h3 class="subsection-title">Community Impact</h3>
             <div class="volunteer-cards">
                 {{ range $index, $vol := .Site.Data.education.volunteering }}
-                <div class="volunteer-card" data-aos="fade-right" data-aos-delay="{{ mul $index 100 }}">
+                <div class="volunteer-card">
                     <div class="volunteer-card-header">
                         <div class="volunteer-icon-wrapper">
-                            <span class="volunteer-icon">❤️</span>
+                            <span class="volunteer-icon"></span>
                         </div>
                         <div class="volunteer-meta">
                             <h4 class="volunteer-org">{{ .organization }}</h4>
