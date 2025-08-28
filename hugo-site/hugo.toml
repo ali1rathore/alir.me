@@ -1,7 +1,6 @@
 baseURL = 'https://alir.me/'
 languageCode = 'en-us'
 title = 'Ali Rathore - AI Consultant & Agent Builder'
-theme = ''
 
 [params]
   description = "AI Consultant specializing in agents, automation, and AI-native solutions. Enterprise AI transformation, custom agent development, and team training."
