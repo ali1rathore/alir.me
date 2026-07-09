@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Ali Rathore">
+  <title>Ali Rathore</title>
+  <!-- App-icon variant of the monogram: dark tile + gold "AR". Filled tile so
+       it stays legible at 16px on light OR dark browser tabs. Uses a system serif
+       (favicons cannot load a webfont); the PNG fallbacks render real Fraunces.
+       Warm-ink tile #16130f · gold #e0a458. -->
+  <rect width="64" height="64" rx="14" fill="#16130f"/>
+  <text x="32" y="45" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="38" letter-spacing="-1" fill="#e0a458">AR</text>
+</svg>
